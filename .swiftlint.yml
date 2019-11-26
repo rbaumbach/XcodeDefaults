@@ -19,5 +19,5 @@ identifier_name:
     - id
 
 excluded:
-  - Specs
   - Pods
+  - Specs
