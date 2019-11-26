@@ -5,10 +5,10 @@ use_frameworks!
 inhibit_all_warnings!
 
 target :<ENTER YOUR TARGET HERE> do
-  pod 'SwiftLint', '0.31.0'
+  pod 'SwiftLint', '0.37.0'
 end
 
 target :Specs do
-    pod 'Quick'
-    pod 'Nimble'
+    pod 'Quick', '2.2.0'
+    pod 'Nimble', '8.0.4'
 end
