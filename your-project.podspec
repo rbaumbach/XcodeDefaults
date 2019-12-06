@@ -11,4 +11,6 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '10.0'
   spec.source_files          = '<ENTER NAME HERE>/Source/**/*.{swift}'
   spec.swift_version         = '5.1.2'
+  
+  spec.dependency '<ENTER YOUR DEPENDENCY HERE>', '~> 0.1.1'
 end
