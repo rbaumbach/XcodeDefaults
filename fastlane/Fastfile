@@ -31,6 +31,20 @@ platform :ios do
     scan(scheme: <ENTER YOUR SCHEME HERE>,
          output_style: "rspec")
   end
+  
+  desc "Install Carthage dependencies"
+  lane :carthage_install do
+    carthage(command: "update",
+             platform: "ios")
+  end
+
+  desc "Builds Capsule.framework.zip using Carthage"
+  lane :build_carthage_framework do
+    carthage(command: "build",
+             no_skip_current: true)
+
+    carthage(command: "archive")
+  end
 
   after_all do |lane|
       puts "🌮 🌮 🌮  Taco Time! 🌮 🌮 🌮"
