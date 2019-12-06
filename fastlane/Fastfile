@@ -20,6 +20,18 @@ platform :ios do
   before_all do
     puts "Doin' some fastlane..."
   end
+  
+  desc "Builds and SwiftLints the workspace"
+  lane :build do
+    xcodebuild(scheme: <ENTER YOUR SCHEME HERE>,
+               workspace: "<ENTER YOUR MODULE NAME HERE>.xcworkspace",
+               xcpretty_output: "rspec")
+
+   swiftlint(strict: true,
+             quiet: true,
+             config_file: ".swiftlint.yml",
+             executable: "Pods/SwiftLint/swiftlint")
+  end
 
   desc "Runs the specs"
   lane :specs do
@@ -38,7 +50,7 @@ platform :ios do
              platform: "ios")
   end
 
-  desc "Builds Capsule.framework.zip using Carthage"
+  desc "Builds <ENTER YOUR MODULE NAME HERE>.framework.zip using Carthage"
   lane :build_carthage_framework do
     carthage(command: "build",
              no_skip_current: true)
