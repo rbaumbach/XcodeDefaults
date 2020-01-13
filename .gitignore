@@ -51,3 +51,4 @@ Snapshots/en-US
 *.ipa
 *.zip
 *.dSYM
+*.xcarchive
