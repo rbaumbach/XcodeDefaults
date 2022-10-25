@@ -10,9 +10,6 @@
 #     https://docs.fastlane.tools/plugins/available-plugins
 #
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:ios)
 
 platform :ios do
@@ -56,6 +53,11 @@ platform :ios do
              no_skip_current: true)
 
     carthage(command: "archive")
+  end
+
+  desc "Builds <ENTER YOUR MODULE NAME HERE> using SPM"
+  lane :build_spm do
+    spm
   end
 
   after_all do |lane|

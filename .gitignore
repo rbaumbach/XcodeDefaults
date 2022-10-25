@@ -18,9 +18,17 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
-.idea/
 ObjectiveC.gcda
 ObjectiveC.gcno
+
+# Artifacts
+
+*.a
+*.framework
+*.ipa
+*.zip
+*.dSYM
+*.xcarchive
 
 # Cocoapods
 
@@ -32,7 +40,13 @@ Carthage
 
 # Swift Package Manager
 
-.build
+.build/
+.swiftpm/
+
+# Jetbrains
+
+.fleet/
+.idea/
 
 # Fastlane
 
@@ -43,12 +57,3 @@ fastlane/test_output/
 fastlane/README.md
 Snapshots/*.html
 Snapshots/en-US
-
-# Artifacts
-
-*.a
-*.framework
-*.ipa
-*.zip
-*.dSYM
-*.xcarchive
